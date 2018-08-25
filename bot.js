@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const auth = require('./auth.json');
+const auth = fs.existsSync('./auth.json') ? require('./auth.json') : process.env.DISCORD_API_KEY;
 const shouts = require('./shouts.json')
 const https = require('https');
 const jsdom = require('jsdom');
